@@ -12,7 +12,7 @@
     "router",
     "spa"
   ],
-  "author": "Shaun Li <shonhen@gmail.com>",
+  "author": "Guillaume Barillot <guillaume@barillot.me>",
   "license": "MIT",
   "homepage": "https://github.com/gbarillot/svelte-router",
   "devDependencies": {
@@ -27,5 +27,8 @@
   },
   "dependencies": {
     "rename": "^1.0.4"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
