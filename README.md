@@ -170,7 +170,7 @@ Now, going to `/25` will match `/:orderId` while going to anything else will mat
 
 ## Handling Not found / 404
 
-There are 2 ways of doing this:, depending on your requirements:
+There are 2 ways of doing this, depending on your requirements:
 
 Using you own custom component
 
