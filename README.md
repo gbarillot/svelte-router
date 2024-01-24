@@ -114,7 +114,7 @@ In addition to `$router.params`, the `$router` object also exposes other useful 
 Instead of using a path to target a route, you can also use its name and pass along its params:
 
 ``` 
-<Link name="edit_user" params={{userId: 123}}>Edit user</a>
+<Link to="edit_user" params={{userId: 123}}>Edit user</a>
 ```
 
 Will generate this 
@@ -126,8 +126,8 @@ Will generate this
 You can also pass any HTML attribute, as well as data attributes:
 
 ``` 
-<Link name="edit_user" params={{userId: 123}} attrs={{class: "card", title: "Edit user"}}>Edit user</Link>
-<Link name="edit_user" params={{userId: 123}} data={{is: "edit-link", do: "edit"}}>Edit user</Link>
+<Link to="edit_user" params={{userId: 123}} attrs={{class: "card", title: "Edit user"}}>Edit user</Link>
+<Link to="edit_user" params={{userId: 123}} data={{is: "edit-link", do: "edit"}}>Edit user</Link>
 ```
 
 Will generate this 
@@ -172,7 +172,7 @@ Now, going to `/25` will match `/:orderId` while going to anything else will mat
 
 There are 2 ways of doing this, depending on your requirements:
 
-Using you own custom component
+**Using you own custom component**
 
 ```javascript
 import  NotFound from './shared/not_found.svelte'
@@ -183,12 +183,12 @@ const routes = [
 ]
 ```
 
-Redirecting to some path
+**Redirecting to some path**
 
 ```javascript
 onRouteChange((before, after) => {
-  // after route === null means no match has been found
-  if(!after) {
+  // No match has been found
+  if(after === null) {
     window.location.href = '/404.html'
   }
 })
